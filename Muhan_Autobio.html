@@ -1,0 +1,107 @@
+<html>
+<head>
+<title>Muhan's Autobiography</title>
+<script>
+// Variable Declaration
+var adPicture = new Array ("chomsky.jpg","greenwald.jpg",
+							"fightingChance.jpg", "animalFarm.jpg",
+							"theSpeech.jpg","justMercy.jpg",
+							"Anon.jpg","giver.jpg")
+var imageClickPics = new Array ("drumSet.jpg","FES.jpg",
+								"picoCTF.jpg","FESbio.jpg",
+								"biking.jpeg","scratch.jpg",
+								"drums.jpg","rootme.png",
+								"chess.jpg","taekwondo.jpg")
+var thisAdd = 0
+var newPic = 0
+
+// Image Cycling Function
+function cycle()
+{
+	if (document.images)
+	{
+		thisAdd++
+		if (thisAdd == 8)
+		{
+			thisAdd = 0
+		}
+		document.adPicture.src=adPicture[thisAdd]
+	}
+	setTimeout("cycle()",3000)
+}
+
+// Image click function
+function changeImg()
+{
+	newPic++
+	if(newPic > 9)
+	{
+		newPic = 0
+	}
+	
+	document.imageClickPics.src=imageClickPics[newPic]
+	return false;
+}
+</script>
+</head>
+
+<!--Body begins here-->
+<body bgcolor="coral" onload="cycle()">
+
+<!--Title-->
+<center>
+<h1>Muhan's Autobiography</h1>
+<img src="muhanluo.png" width="200px">
+</center>
+
+<!--Contact-->
+<font size="50px" color="2B2C47">Welcome to the Site!</font>
+<br>
+<font color="2B2C47">Contact me <a href="mailto:muhanluo@portageps.org">here</a></font>
+
+<hr>
+
+<!--Cycle images-->
+
+<center>
+<h2>My Favorite Books</h2>
+<img src="chomsky.jpg" name="adPicture" height="300">
+</center>
+
+<!--Favorite Book List-->
+<ol>
+<li><em>No Place to Hide</em> by Glen Greenwald</li>
+<li><em>Manufacturing Consent</em> by Noam Chomsky</li>
+<li><em>The Speech</em> by Bernie Sanders</li>
+<li><em>Just Mercy</em> by Bryan Stevenson</li>
+<li><em>Animal Farm</em> by George Orwell</li>
+<li><em>A fighting Chance</em>by Elizabeth Warren</li>
+<li><em>We are Anonymous</em>by Penny Olson</li>
+<li><em>The Giver</em>by Lois Lowry</li>
+</ol>
+
+<hr>
+
+<!--Onclick Image Gallery-->
+<center>
+<h2>My Hobbies</h2>
+<img src="drumSet.jpg" onclick="changeImg()" name="imageClickPics" height="300">
+</center>
+
+<!--Hobbies List-->
+<ul>
+<li>Managing Flat Earth Society Site. <a href="http://flatearthsociety.atwebpages.com">Link</a></li>
+<li>Writing biographies for my website</li>
+<li>Playing Capture The Flag Competitions (<strong>CTF</strong>)</li>
+<li>Biking</li>
+<li>Playing drum set</li>
+<li>Making Scratch Games</li>
+<li>Playing drums for Chinese New Year</li>
+<li>Practice Hacking</li>
+<li>Play Chess</li>
+<li>Do Tae Kwon Do</li>
+</ul>
+
+<!--Body End-->
+</body>
+
